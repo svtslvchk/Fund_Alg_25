@@ -1,0 +1,6 @@
+Студенты с баллом, выше среднего (4.04)
+1) Ivanova Maria, CS-102, avg: 4.6
+2) Kuznetsova Anna, CS-101, avg: 4.6
+3) Lebedeva Olga, CS-102, avg: 4.8
+4) Petrov Ivan, CS-101, avg: 4.2
+5) Sokolova Ekaterina, CS-103, avg: 5

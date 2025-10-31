@@ -1,0 +1,10 @@
+12345 Ivan Petrov CS-101 5 4 3 5 4
+12346 Maria Ivanova CS-102 4 5 5 4 5
+12347 Alex Smirnov CS-101 3 4 3 4 3
+12348 Ekaterina Sokolova CS-103 5 5 5 5 5
+12349 Dmitry Volkov CS-102 4 3 4 3 4
+12350 Anna Kuznetsova CS-101 5 4 5 4 5
+12351 Sergey Popov CS-103 3 3 4 3 3
+12352 Olga Lebedeva CS-102 5 5 4 5 5
+12353 Maxim Novikov CS-101 4 4 4 4 4
+12354 Irina Fedorova CS-103 2 3 3 4 3
