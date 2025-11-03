@@ -8,6 +8,6 @@ typedef enum {
 } OperationStatus;
 
 OperationStatus createMask(const int r, int *mask);
-OperationStatus convertToBase(const int number, const int r, char **res);
+OperationStatus convertToBase(const unsigned int number, const int r, char **res);
 
 #endif

@@ -22,8 +22,8 @@ OperationStatus createMask(const int r, int *mask) {
     return SUCCESS;
 }
 
-OperationStatus convertToBase(const int number, const int r, char **res) {
-    if (!res || r < 1 || r > 5 || !number) {
+OperationStatus convertToBase(const unsigned int number, const int r, char **res) {
+    if (!res || r < 1 || r > 5) {
         return INVALID_INPUT;
     }
     int mask = 0;
@@ -32,9 +32,19 @@ OperationStatus convertToBase(const int number, const int r, char **res) {
         return os_mask;
     }
 
-    int n = number;
+    if (!number) {
+        *res = malloc(2);
+        if (!*res) {
+            return MEMORY_ERROR;
+        }
+        (*res)[0] = '0';
+        (*res)[1] = '\0';
+        return SUCCESS;
+    }
+
+    unsigned int n = number;
     int i = 0;
-    int capacity = 2;
+    int capacity = 16;
     *res = malloc(capacity);
     if (!*res) {
         return MEMORY_ERROR;
@@ -48,9 +58,9 @@ OperationStatus convertToBase(const int number, const int r, char **res) {
         } else {
             digit = 'A' + (cur - 10);
         }
-        if (i >= capacity) {
+        if (i > capacity) {
             capacity *= 2;
-            char *temp = realloc(res, capacity);
+            char *temp = realloc(*res, capacity);
             if (!temp) {
                 free(*res);
                 return MEMORY_ERROR;
@@ -64,7 +74,7 @@ OperationStatus convertToBase(const int number, const int r, char **res) {
         n = (n >> r);
     }
 
-    *res[i] = '\0';
+    (*res)[i] = '\0';
 
     reverse(*res, i);
     return SUCCESS;
