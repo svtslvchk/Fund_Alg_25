@@ -6,7 +6,14 @@
 int main() {
     char str[MAX_SIZE];
     printf("Enter string: ");
-    scanf("%999s", str);
+    fgets(str, MAX_SIZE, stdin);
+
+    for (int i = 0; str[i]; i++) {
+        if (str[i] == '\n') {
+            str[i] = '\0';
+            break;
+        }
+    }
 
     if (checkBrackets(str)) {
         printf("The brackets are placed correctly\n");

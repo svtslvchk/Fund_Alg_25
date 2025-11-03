@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -Wpedantic -fsanitize=address -std=c11 -g
-TARGET = lab1
+TARGET = lab6
 SOURCES = main.c check_brackets.c
 HEADERS = check_brackets.h
 
