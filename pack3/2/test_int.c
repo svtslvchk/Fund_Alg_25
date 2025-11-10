@@ -27,7 +27,6 @@ void test_int_basic() {
     assert(get_at_vector(&v, 1) == 20);
     assert(get_at_vector(&v, 2) == 30);
     
-    // Очистка стекового вектора
     erase_vector(&v);
     printf("PASSED\n");
 }
@@ -45,7 +44,6 @@ void test_int_copy() {
     assert(v2.size == 2);
     assert(is_equal_vector(&v1, &v2));
     
-    // Очистка стековых векторов
     erase_vector(&v1);
     erase_vector(&v2);
     printf("PASSED\n");
@@ -63,9 +61,8 @@ void test_int_heap_copy() {
     assert(v2->size == 2);
     assert(is_equal_vector(&v1, v2));
     
-    // Очистка
-    erase_vector(&v1);    // стековый
-    delete_vector(v2);    // кучовый
+    erase_vector(&v1);    
+    delete_vector(v2);    
     
     printf("PASSED\n");
 }
