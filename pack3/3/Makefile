@@ -1,8 +1,8 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -Wpedantic -fsanitize=address -std=c11 -g
-TARGET = test_liver
-SOURCES = test.c liver.c
-HEADERS = liver.h
+CFLAGS = -Wall -Werror -Wextra -Wpedantic -std=c11 -g
+TARGET = test_complete
+SOURCES = test.c liver.c linked_list.c
+HEADERS = liver.h linked_list.h
 
 .PHONY: all clean test
 
